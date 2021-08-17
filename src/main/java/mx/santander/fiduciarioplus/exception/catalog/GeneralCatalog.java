@@ -1,4 +1,4 @@
-package mx.santander.fiduciarioplus.lib.exception.catalog;
+package mx.santander.fiduciarioplus.exception.catalog;
 
 import org.springframework.http.HttpStatus;
 

@@ -1,6 +1,6 @@
-package mx.santander.fiduciarioplus.lib.exception.model;
+package mx.santander.fiduciarioplus.exception.model;
 
-import mx.santander.fiduciarioplus.lib.exception.catalog.PersistenDataCatalog;
+import mx.santander.fiduciarioplus.exception.catalog.PersistenDataCatalog;
 
 public class PersistenDataException extends ModelException{
 

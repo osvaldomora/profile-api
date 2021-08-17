@@ -1,4 +1,4 @@
-package mx.santander.fiduciarioplus.lib.exception;
+package mx.santander.fiduciarioplus.exception;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

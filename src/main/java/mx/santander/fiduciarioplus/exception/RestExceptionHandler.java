@@ -1,4 +1,4 @@
-package mx.santander.fiduciarioplus.lib.exception;
+package mx.santander.fiduciarioplus.exception;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.multipart.MaxUploadSizeExceededException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import mx.santander.fiduciarioplus.lib.exception.catalog.BusinessCatalog;
-import mx.santander.fiduciarioplus.lib.exception.catalog.GeneralCatalog;
-import mx.santander.fiduciarioplus.lib.exception.model.BusinessException;
-import mx.santander.fiduciarioplus.lib.exception.model.InvalidDataException;
-import mx.santander.fiduciarioplus.lib.exception.model.ModelException;
-import mx.santander.fiduciarioplus.lib.exception.model.PersistenDataException;
+import mx.santander.fiduciarioplus.exception.catalog.BusinessCatalog;
+import mx.santander.fiduciarioplus.exception.catalog.GeneralCatalog;
+import mx.santander.fiduciarioplus.exception.model.BusinessException;
+import mx.santander.fiduciarioplus.exception.model.InvalidDataException;
+import mx.santander.fiduciarioplus.exception.model.ModelException;
+import mx.santander.fiduciarioplus.exception.model.PersistenDataException;
 
 
 @ControllerAdvice

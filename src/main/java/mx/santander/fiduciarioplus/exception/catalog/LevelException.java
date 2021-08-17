@@ -1,4 +1,4 @@
-package mx.santander.fiduciarioplus.lib.exception.catalog;
+package mx.santander.fiduciarioplus.exception.catalog;
 
 /**
  * Este ENUM define el nivel de error

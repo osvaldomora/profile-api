@@ -1,6 +1,6 @@
-package mx.santander.fiduciarioplus.lib.exception.model;
+package mx.santander.fiduciarioplus.exception.model;
 
-import mx.santander.fiduciarioplus.lib.exception.catalog.GeneralCatalog;
+import mx.santander.fiduciarioplus.exception.catalog.GeneralCatalog;
 
 public class GeneralException extends ModelException{
 
