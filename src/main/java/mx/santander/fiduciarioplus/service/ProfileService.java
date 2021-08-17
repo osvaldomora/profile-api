@@ -43,7 +43,7 @@ public class ProfileService implements IProfileService {
 
 	@Override
 	public DataProfileResDto convert(String buc) {
-		//exist(buc);
+		exist(buc);
 		Profile profile = getProfile(buc);
 
 
@@ -70,7 +70,7 @@ public class ProfileService implements IProfileService {
 
 	@Override
 	public boolean exist(String buc) {
-//
+
 //		Optional<Profile> op = iProfileRepository.findByBuc(buc);
 //
 //		System.out.println("optional" + op.isEmpty());
@@ -85,12 +85,12 @@ public class ProfileService implements IProfileService {
 	@Override
 	public void saveData() {
 
-		Profile p1 = Profile.builder().id(23L).buc("123456789123").type("FIDEICOMITENTE").status("ACTIVO").build();
+		Profile p1 = Profile.builder().id(23L).buc("9807140192").type("FIDEICOMITENTE").status("ACTIVO").build();
 		iProfileRepository.save(p1);
-		Profile p2 = Profile.builder().id(24L).buc("123456789124").type("FIDEICOMISARIO").status("ACTIVO").build();
+		Profile p2 = Profile.builder().id(24L).buc("7583017491").type("FIDEICOMISARIO").status("ACTIVO").build();
 		iProfileRepository.save(p2);
 		
-		Profile p3 = Profile.builder().id(25L).buc("123456789125").type("COMITE_TECNICO").status("BAJA").negocios(new ArrayList<Business>()).build();
+		Profile p3 = Profile.builder().id(25L).buc("1489401848").type("COMITE_TECNICO").status("BAJA").negocios(new ArrayList<Business>()).build();
 		iProfileRepository.save(p3);
 
 		iProfileRepository.findAll().stream().forEach(x -> System.out.println(x));
@@ -113,24 +113,24 @@ public class ProfileService implements IProfileService {
 
 		// access subnegocio1 del negocio1
 		List<Access> access1 = Arrays.asList(
-				Access.builder().description("ALTA_INSTRUCCIONES").idAccess("1231").build(),
-				Access.builder().description("CONSULTAR_SUCURSALES").idAccess("1232").build(),
-				Access.builder().description("CONSULTAR_BANCOS").idAccess("1233").build(),
-				Access.builder().description("ESTADO_DE_CUENTA").idAccess("1234").build(),
-				Access.builder().description("CONSULTAR_NSTRUCCIONES").idAccess("1235").build());
+				Access.builder().description("ALTA_INSTRUCCIONES").idAccess("CI").build(),
+				Access.builder().description("CONSULTAR_SUCURSALES").idAccess("CS").build(),
+				Access.builder().description("CONSULTAR_BANCOS").idAccess("CB").build(),
+				Access.builder().description("ESTADO_DE_CUENTA").idAccess("EC").build(),
+				Access.builder().description("CONSULTAR_INSTRUCCIONES").idAccess("CI").build());
 		// access subnegocio2 del negocio1
-		List<Access> access2 = Arrays.asList(Access.builder().description("ALTA_INSTRUCCIONES").idAccess("1231").build(),
-				Access.builder().description("CONSULTAR_SUCURSALES").idAccess("1232").build(),
-				Access.builder().description("CONSULTAR_BANCOS").idAccess("1233").build(),
+		List<Access> access2 = Arrays.asList(Access.builder().description("ALTA_INSTRUCCIONES").idAccess("AI").build(),
+				Access.builder().description("CONSULTAR_SUCURSALES").idAccess("CS").build(),
+				Access.builder().description("CONSULTAR_BANCOS").idAccess("CB").build(),
 //				Access.builder().idDescription("ESTADO_DE_CUENTA").idAccess(false).build(),
-				Access.builder().description("CONSULTAR_NSTRUCCIONES").idAccess("1235").build());
+				Access.builder().description("CONSULTAR_INSTRUCCIONES").idAccess("CI").build());
 		// access subnegocio1 del negocio2
 		List<Access> access3 = Arrays.asList(
 //				Access.builder().idDescription("ALTA_INSTRUCCIONES").idAccess(false).build(),
-				Access.builder().description("CONSULTAR_SUCURSALES").idAccess("1232").build(),
+				Access.builder().description("CONSULTAR_SUCURSALES").idAccess("CS").build(),
 //				Access.builder().idDescription("CONSULTAR_BANCOS").idAccess(false).build(),
 //				Access.builder().idDescription("ESTADO_DE_CUENTA").idAccess(false).build(),
-				Access.builder().description("CONSULTAR_NSTRUCCIONES").idAccess("1235").build());
+				Access.builder().description("CONSULTAR_INSTRUCCIONES").idAccess("CI").build());
 
 		subBus1_1.setAccess(access1);
 		subBus1_2.setAccess(access2);
@@ -155,11 +155,11 @@ public class ProfileService implements IProfileService {
 
 		// access subnegocio1 del negocio2
 		List<Access> accesubBus1N2 = Arrays.asList(
-				Access.builder().description("ALTA_INSTRUCCIONES").idAccess("1231").build(),
-				Access.builder().description("CONSULTAR_SUCURSALES").idAccess("1232").build(),
-				Access.builder().description("CONSULTAR_BANCOS").idAccess("1233").build(),
-				Access.builder().description("ESTADO_DE_CUENTA").idAccess("1234").build(),
-				Access.builder().description("CONSULTAR_NSTRUCCIONES").idAccess("1235").build());
+				Access.builder().description("ALTA_INSTRUCCIONES").idAccess("AI").build(),
+				Access.builder().description("CONSULTAR_SUCURSALES").idAccess("CI").build(),
+				Access.builder().description("CONSULTAR_BANCOS").idAccess("CB").build(),
+				Access.builder().description("ESTADO_DE_CUENTA").idAccess("EC").build(),
+				Access.builder().description("CONSULTAR_INSTRUCCIONES").idAccess("CI").build());
 
 		subBus1N2.setAccess(accesubBus1N2);
 		List<SubBusiness> laccesubBus1N2 = Arrays.asList(subBus1N2);

@@ -10,7 +10,7 @@ public enum GeneralCatalog {
 	
 	GRAL001("GeneralException","GRAL.001","Internal Server Error.",HttpStatus.INTERNAL_SERVER_ERROR,LevelException.ERROR),
 	GRAL002("GeneralException","GRAL.002","Error al enviar Query Parameters.",HttpStatus.BAD_REQUEST,LevelException.WARN),
-	GRAL003("GeneralException","GRAL.003","URI Parameter no valido.",HttpStatus.BAD_REQUEST,LevelException.WARN);
+	GRAL003("GeneralException","GRAL.003","URI Parameter no valido QWEWEW.",HttpStatus.BAD_REQUEST,LevelException.WARN);
 	
 	private final String type;
 	private final String code;

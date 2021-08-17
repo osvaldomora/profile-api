@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import mx.santander.fiduciarioplus.exception.catalog.BusinessCatalog;
 import mx.santander.fiduciarioplus.exception.catalog.GeneralCatalog;
 import mx.santander.fiduciarioplus.exception.model.BusinessException;
+import mx.santander.fiduciarioplus.exception.model.GeneralException;
 import mx.santander.fiduciarioplus.exception.model.InvalidDataException;
 import mx.santander.fiduciarioplus.exception.model.ModelException;
 import mx.santander.fiduciarioplus.exception.model.PersistenDataException;
@@ -26,7 +27,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 	 * @param request Informacion del request enviado
 	 * @return Respuesta basada en el catalogo de excepciones
 	 */
-	@ExceptionHandler({BusinessException.class, InvalidDataException.class, PersistenDataException.class})
+	@ExceptionHandler({BusinessException.class, InvalidDataException.class, PersistenDataException.class,GeneralException.class})
 	public ResponseEntity<?> handlerRestException (ModelException ex, HttpServletRequest request){
 		ErrorResponse errorResponse = new ErrorResponse(ex.getCode(), 
 				ex.getMessage(), 
