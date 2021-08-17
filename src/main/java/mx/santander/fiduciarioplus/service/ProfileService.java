@@ -43,7 +43,7 @@ public class ProfileService implements IProfileService {
 
 	@Override
 	public DataProfileResDto convert(String buc) {
-		exist(buc);
+		//exist(buc);
 		Profile profile = getProfile(buc);
 
 
