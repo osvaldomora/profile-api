@@ -12,6 +12,6 @@ import mx.santander.fiduciarioplus.model.profile.Profile;
 @Transactional
 public interface IProfileRepository extends JpaRepository<Profile, Long>{
 	
-	public Optional<Profile> findByBuc(String buc);
+//	public Optional<Profile> findByBuc(String buc);
 
 }

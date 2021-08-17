@@ -70,15 +70,16 @@ public class ProfileService implements IProfileService {
 
 	@Override
 	public boolean exist(String buc) {
-
-		Optional<Profile> op = iProfileRepository.findByBuc(buc);
-//		op.get().getBuc()
-		System.out.println("optional" + op.isEmpty());
-		// valida si el perfil existe
-		if (op.isEmpty())
-			op.orElseThrow(()-> new GeneralException(GeneralCatalog.GRAL003));
-
-		return op.isPresent();
+//
+//		Optional<Profile> op = iProfileRepository.findByBuc(buc);
+//
+//		System.out.println("optional" + op.isEmpty());
+//		// valida si el perfil existe
+//		if (op.isEmpty())
+//			op.orElseThrow(()-> new GeneralException(GeneralCatalog.GRAL003));
+//
+//		return op.isPresent();
+		return true;
 	}
 
 	@Override
