@@ -13,6 +13,10 @@ import org.springframework.stereotype.Service;
 import mx.santander.fiduciarioplus.dto.getprofile.DataDto;
 import mx.santander.fiduciarioplus.dto.getprofile.DataProfileResDto;
 import mx.santander.fiduciarioplus.dto.getprofile.ProfileDto;
+import mx.santander.fiduciarioplus.lib.exception.catalog.GeneralCatalog;
+import mx.santander.fiduciarioplus.lib.exception.catalog.PersistenDataCatalog;
+import mx.santander.fiduciarioplus.lib.exception.model.GeneralException;
+import mx.santander.fiduciarioplus.lib.exception.model.PersistenDataException;
 import mx.santander.fiduciarioplus.model.profile.Access;
 import mx.santander.fiduciarioplus.model.profile.Business;
 import mx.santander.fiduciarioplus.model.profile.Profile;
@@ -70,8 +74,8 @@ public class ProfileService implements IProfileService {
 		Optional<Profile> op = iProfileRepository.findByBuc(buc);
 		System.out.println("optional" + op.isEmpty());
 		// valida si el perfil existe
-		if (!op.isEmpty())
-			op.orElseThrow();
+		if (op.isEmpty())
+			op.orElseThrow(()-> new GeneralException(GeneralCatalog.GRAL003));
 
 		return op.isPresent();
 	}
